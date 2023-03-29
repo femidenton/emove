@@ -1,13 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Dashboard from './components/dashboard/main'
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
-  );
+        <div className="App">
+          <Dashboard />
+        </div>
+  )
 }
 
-export default App;
+export default App

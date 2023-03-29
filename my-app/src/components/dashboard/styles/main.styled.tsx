@@ -1,10 +1,14 @@
-.App{
+import styled from "styled-components";
+
+
+
+export const StyledMain = styled.main`
+    
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
-}
 
 section {
   display: flex;
@@ -21,3 +25,5 @@ section {
   background-color: #E5E5E5;
   padding-top: 50px;
 }
+
+`
