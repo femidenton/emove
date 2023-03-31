@@ -9,6 +9,15 @@ export const StyledHome = styled.main`
   margin: 0 auto;
 
 
+  .loader{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
   h1{
     font-family: 'Inter';
 font-style: normal;
@@ -56,6 +65,17 @@ line-height: 140%;
   border-radius: 50%;
   font-size: 32px;
   color: #F79009;
+}
+
+
+@media screen and (max-width: 765px){
+
+  width: 95%;
+  
+ .boxes{
+  grid-template-columns: 1fr;
+ }
+
 }
 
 

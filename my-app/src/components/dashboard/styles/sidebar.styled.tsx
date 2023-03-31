@@ -62,6 +62,41 @@ ul li span{
 
 
 
+@media screen and (max-width: 765px){
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #fff;
+  z-index: 5000;
+
+
+  h5{
+    display: none;
+  }
+
+  ul{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul li{
+    margin-top: 5px;
+  }
+
+
+  ul li span{
+   display: none;
+  }
+}
 
 
 

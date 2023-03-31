@@ -70,6 +70,37 @@ export const StyledGraph = styled.section`
   }
 
 
+  .caret{
+    color: #047857;
+    margin-left: 30px;
+  }
+
+
+  @media screen and (max-width: 765px){
+
+    .chart-container .topBar h1{
+   text-align: center;
+}
+
+
+
+.chart-container .topBar p{
+     text-align: center;
+
+}
+
+ .chart-container{
+  width: 100%;
+ }
+
+ .chart-container .BarFlex{
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+
 
 
 `
