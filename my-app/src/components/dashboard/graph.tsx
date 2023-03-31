@@ -1,6 +1,7 @@
 import React from 'react'
 import { Chart } from 'react-google-charts'
 import { StyledGraph } from './styles/graph.styled'
+import { FaCaretUp } from 'react-icons/fa'
 
 interface BarChartProps {
   data: Array<[string, number]>
@@ -27,21 +28,30 @@ const BarChart: React.FC<BarChartProps> = ({ data, title }) => {
               <h4>Earnings</h4>
               <div>
                 <span>32%</span>
-                <span>6.72%%</span>
+                <span className="caret">
+                  <FaCaretUp  />
+                  6.72%%
+                </span>
               </div>
             </div>
             <div className="percbox">
               <h4>Expenses</h4>
               <div>
                 <span>8%</span>
-                <span>0.08%</span>
+                <span className="caret">
+                  <FaCaretUp />
+                  0.08%
+                </span>
               </div>
             </div>
             <div className="percbox">
               <h4>Profits - previous month</h4>
               <div>
                 <span>26%</span>
-                <span>6.90%</span>
+                <span className="caret" >
+                  <FaCaretUp  />
+                  6.90%
+                </span>
               </div>
             </div>
           </div>

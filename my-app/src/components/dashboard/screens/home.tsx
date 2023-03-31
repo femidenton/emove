@@ -1,39 +1,45 @@
 import BarChart from '../graph'
 import { StyledHome } from '../styles/home.styled'
 import { FaCarSide } from 'react-icons/fa'
-import useFetch from '../../../hooks/useFetch';
+import useFetch from '../../../hooks/useFetch'
+import { BeatLoader } from 'react-spinners'
 
-// type Data = {
-//   result: any;
-//   isLoading: boolean;
-//   error: any;
-// }
+
 const Home = () => {
-  
-  //  const allDrivers: Promise<Data> = useFetch('http://localhost:8081/api/v1/admin/allDrivers');
-  //  const allPassengers = useFetch("http://localhost:8081/api/v1/admin/totalPassengers");
-  //  const allRides = useFetch('http://localhost:8081/api/v1/admin/tripHistory');
+  const { drivers, passengers, rides, loading, error } = useFetch();
 
-  // const drivers = allDrivers.result;
-  // const passengers = allPassengers.result;
-  // const rides = allRides.result;
+  if (loading) {
+    return (
+      <StyledHome>
+        <div className='loader'>
+          <BeatLoader color="#F79009" />
+        </div>
+    </StyledHome>);
+  }
+  if (error) {
+   return (
+      <StyledHome>
+       <div className='loader'>
+         <h1>Internal Server Error</h1>
+        </div>
+    </StyledHome>);
+  }
 
 
   const data: Array<[string, number]> = [
     ['Jan', 15000],
     ['Feb', 18000],
     ['Mar', 20000],
-    ['Apr', 15000],
-    ['May', 22000],
-    ['Jun', 23000],
-    ['Jul', 25000],
-    ['Aug', 25000],
-    ['Sep', 23000],
-    ['Oct', 16000],
-    ['Nov', 10000],
-    ['Dec', 8000],
+    ['Apr', 0],
+    ['May', 0],
+    ['Jun', 0],
+    ['Jul', 0],
+    ['Aug', 0],
+    ['Sep', 0],
+    ['Oct', 0],
+    ['Nov', 0],
+    ['Dec', 0],
   ]
-
 
   return (
     <StyledHome>
@@ -42,28 +48,34 @@ const Home = () => {
       </div>
       <div className="boxes">
         <div className="box">
-          <div className="left">
-            <h3>207</h3>
-            <small>ride</small>
-          </div>
-          <div className="icon">
-            <FaCarSide  />
-          </div>
-        </div>
-        <div className="box">
-          <div className="left">
-            <h3>84</h3>
-            <small>passengers</small>
-          </div>
+          {rides &&
+            (<div className="left">
+              <h3>{rides?.length}</h3>
+              <small>rides</small>
+            </div>
+          )}
           <div className="icon">
             <FaCarSide />
           </div>
         </div>
         <div className="box">
-          <div className="left">
-            <h3>32</h3>
-            <small>drivers</small>
+          {passengers && (
+            <div className="left">
+              <h3>{passengers?.length}</h3>
+              <small>passengers</small>
+            </div>
+          )}
+          <div className="icon">
+            <FaCarSide />
           </div>
+        </div>
+        <div className="box">
+          {drivers && (
+            <div className="left">
+              <h3>{drivers?.length}</h3>
+              <small>drivers</small>
+            </div>
+          )}
           <div className="icon">
             <FaCarSide />
           </div>

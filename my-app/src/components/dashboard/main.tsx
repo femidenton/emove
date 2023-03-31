@@ -1,13 +1,14 @@
-import Header from './header'
-import Home from './screens/home'
-import Drivers from './screens/drivers'
-import Pricing from './screens/pricing'
-import Driver from './driver'
-import Sidebar from './sidebar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { StyledMain } from './styles/main.styled'
-import { ModalContext } from '../../context/dashboardContext'
-import { useState } from 'react'
+import Header from './header';
+import Home from './screens/home';
+import Drivers from './screens/drivers';
+import Pricing from './screens/pricing';
+import Driver from './driver';
+import Sidebar from './sidebar';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { StyledMain } from './styles/main.styled';
+import { ModalContext } from '../../context/dashboardContext';
+import { useState } from 'react';
+
 
 function Dashboard() {
     const [modals, setModals] = useState({
@@ -21,7 +22,7 @@ function Dashboard() {
       <BrowserRouter>
         <StyledMain>
           <Header />
-          <section>
+          <section className='main-section'>
             <Sidebar />
             <div className="pagination">
               <Routes>

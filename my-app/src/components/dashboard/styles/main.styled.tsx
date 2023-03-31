@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 export const StyledMain = styled.main`
     
   height: 100vh;
@@ -10,7 +8,8 @@ export const StyledMain = styled.main`
   top: 0;
   left: 0;
 
-section {
+
+.main-section {
   display: flex;
   width: 100%;
   max-width: 100%;
@@ -24,6 +23,15 @@ section {
   max-width: 100%;
   background-color: #E5E5E5;
   padding-top: 50px;
+}
+
+
+@media screen and (max-width: 765px){
+
+  .main-section{
+     flex-direction: column;
+  }
+
 }
 
 `
