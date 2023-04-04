@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledLandingTop = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export const StyledLandingTop = styled.div`
   }
 
   .left-top {
-  position:relative
+  position:relative;
   align-items: center;
   padding-left: 50px;
   bottom: 30px;
