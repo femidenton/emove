@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { StyledForgotPassword } from '../styles/forgotpassword.styled'
 
 export const ForgotPassword = () => {
-  const [email, setEmail] = useState('')
 
   return (
     <StyledForgotPassword>
