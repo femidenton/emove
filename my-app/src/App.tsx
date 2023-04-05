@@ -1,13 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import SuccessModal from './Components/SuccessModal'
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
-  );
+    <>
+      <SuccessModal />
+    </>
+  )
 }
-
-export default App;
+export default App
