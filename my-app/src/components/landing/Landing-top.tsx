@@ -1,9 +1,7 @@
-import React from 'react'
 import PropTypes from "prop-types";
 import Button from './Button'
 import Logo from './Logo'
 import { StyledLandingTop } from './styles/Landing-top.styled';
-import { StyledButton } from './styles/button.styled';
 
 const LandingTop = (props: {
  title: string,

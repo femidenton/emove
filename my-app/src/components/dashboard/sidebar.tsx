@@ -10,19 +10,19 @@ function Sidebar() {
       <h5>Main</h5>
       <ul>
         <li>
-          <Link className={(pathname === "/" || pathname==="/driver") ? 'active' : 'deActive'} to="/">
+          <Link className={(pathname === "/admin" || pathname==="/driver") ? 'active' : 'deActive'} to="/admin">
             <FaTabletAlt className="sideIcon" />
             <span>Dashboard</span>
           </Link>
         </li>
         <li>
-          <Link className={pathname==="/drivers" ? 'active' : 'deActive'}  to="/drivers">
+          <Link className={pathname==="/admin/drivers" ? 'active' : 'deActive'}  to="/admin/drivers">
             <FaUserAlt className="sideIcon" />
             <span>Add a Driver</span>
           </Link>
         </li>
         <li>
-          <Link className={pathname==="/pricing" ? 'active' : 'deActive'}  to="/pricing">
+          <Link className={pathname==="/admin/pricing" ? 'active' : 'deActive'}  to="/admin/pricing">
             <FaMoneyBill className="sideIcon" />
             <span>Pricing</span>
           </Link>

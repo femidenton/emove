@@ -1,5 +1,4 @@
-import Button from "./Button";
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
 import { StyledMain } from './styles/main.styled'
 import LandingTop from "./Landing-top";
 import Content from "./Landing-content";

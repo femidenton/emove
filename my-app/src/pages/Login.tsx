@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { loginUser } from '../api/api'
 import { StyledLoginPage } from '../styles/StyledLoginPage'
@@ -6,8 +6,11 @@ import image1 from '../images/image1.png'
 import Road from '../images/Road.png'
 import { HiOutlineMail } from 'react-icons/hi'
 import { VscKey } from 'react-icons/vsc'
+import { UserContext } from '../context/userContext'
 
 export default function Login() {
+  const { setUser }:any = useContext(UserContext);
+  
   const [loginData, setLoginData] = useState({})
   const [error, setError] = useState('')
   const navigate = useNavigate()
@@ -23,7 +26,6 @@ export default function Login() {
   const handleSubmit = async (e: any) => {
     e.preventDefault()
     const loginResponse: any = await loginUser(loginData)
-    console.log(loginResponse)
     if (loginResponse.response) {
       const { data } = loginResponse.response
       if (data.message) {
@@ -35,7 +37,8 @@ export default function Login() {
 
     const { data } = loginResponse
     localStorage.setItem('userToken', JSON.stringify(data))
-    navigate('/dashboard')
+    setUser(data);
+    navigate('/admin')
   }
 
   const renderError = () => {
@@ -95,10 +98,8 @@ export default function Login() {
             </p>
           </div>
         </form>
-
         <div>{error && renderError()}</div>
       </div>
-
       <div>
         <img src={image1} alt="" />
       </div>

@@ -4,7 +4,7 @@ import Drivers from './screens/drivers';
 import Pricing from './screens/pricing';
 import Driver from './driver';
 import Sidebar from './sidebar';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 import { StyledMain } from './styles/main.styled';
 import { ModalContext } from '../../context/dashboardContext';
 import { useState } from 'react';
@@ -19,7 +19,6 @@ function Dashboard() {
 
   return (
     <ModalContext.Provider value={{modals, setModals}}>
-      <BrowserRouter>
         <StyledMain>
           <Header />
           <section className='main-section'>
@@ -34,7 +33,6 @@ function Dashboard() {
             </div>
           </section>
         </StyledMain>
-      </BrowserRouter>
     </ModalContext.Provider>
   )
 }
