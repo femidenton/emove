@@ -1,8 +1,6 @@
 import { createContext } from "react";
 
 
-
-
 // Create the context object
-export const ModalContext = createContext({})
+export const UserContext = createContext({})
 

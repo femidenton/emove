@@ -1,5 +1,3 @@
-import React from 'react'
-import PropTypes from "prop-types";
 import Logo from './Logo-footer'
 import { Styledfooter } from './styles/Landing-Bottom.styled';
 const insta = require("../landing/Assets/insta.png")

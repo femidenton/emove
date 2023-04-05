@@ -1,6 +1,4 @@
-import React from 'react'
-import PropTypes from "prop-types";
-import {Routes, Route, useNavigate} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import { StyledButton } from './styles/button.styled';
 
 const Button = (props: {color: string, text: String, About: string, Login: String}) => {

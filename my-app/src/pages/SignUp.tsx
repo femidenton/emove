@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { signUpUser } from '../api/api'
 import { Link, useNavigate } from 'react-router-dom'
 import { StyledSignUpPage } from '../styles/StyledSignupPage'
@@ -34,7 +34,7 @@ export default function SignUp() {
         setError(data.message)
       } else if (data.errors) {
         const dataErrors = Object.keys(data.errors)
-        dataErrors.forEach((error) => {
+        dataErrors.forEach(() => {
           setError('error2')
         })
       }
@@ -44,7 +44,7 @@ export default function SignUp() {
     localStorage.setItem('userToken', JSON.stringify(data))
     if (data.status === 'success') {
       // navigate(`/verify/${data.userId}/${data.token}`)
-      navigate(`/verify`)
+      navigate(`/verify-email`)
     } else {
       navigate('/')
     }
@@ -59,7 +59,6 @@ export default function SignUp() {
 
   return (
     <StyledSignUpPage>
-      {/* <div className="container"> */}
         <div className="form-container">
           <div className='logo-header'>
             <img src={Road} alt="" />
@@ -163,7 +162,6 @@ export default function SignUp() {
         <div className="image-container">
           <img src={image1} alt="" />
         </div>
-      {/* </div> */}
     </StyledSignUpPage>
   )
 }

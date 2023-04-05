@@ -1,7 +1,5 @@
-import React from 'react'
 import Bus from './Bus'
 import { StyledLandingContent } from './styles/Landing-content-styled'
-const bus = require("../landing/Assets/bus.png")
 const pointer = require("../landing/Assets/pointer.png")
 
 
