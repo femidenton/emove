@@ -1,4 +1,5 @@
 import './App.css'
+import SuccessModal from './Components/SuccessModal'
 import { Routes, Route } from 'react-router-dom'
 import { PrivateRoute } from './protected/protected'
 import Dashboard from './components/dashboard/main'
