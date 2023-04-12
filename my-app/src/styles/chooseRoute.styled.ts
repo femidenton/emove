@@ -12,6 +12,11 @@ h1{
     color: #101828;
 }
 
+a{
+    text-decoration:none;
+    color: #000;
+}
+
 .container{
   width: 95%;
   margin: 0 auto;

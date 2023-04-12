@@ -3,13 +3,15 @@ import map from '../images/map.png'
 import img from '../components/dashboard/images/rec.png'
 import Button from './dashboard/button'
 import { StyledChooseRoute } from '../styles/chooseRoute.styled'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { IRoute } from '../interfaces/apiTypes'
 import { fetchRoutes } from '../api/api'
 
 const TripDetails = () => {
-    const [route, setRoute] = useState<IRoute>();
+    const [route, setRoute] = useState<IRoute>(
+        { destination: 'Gbagada', pickup: 'Bariga', price: 600.00, __v: 11, _id: "defaultId" }
+    );
     const { id } = useParams();
     console.log(id)
 
@@ -29,10 +31,10 @@ const TripDetails = () => {
   return (
     <StyledChooseRoute>
       <div className="container">
-        <div className="backbtn">
+        <Link to="/user/book-route" className="backbtn">
           <FaArrowLeft />
           Go back
-        </div>
+        </Link>
         <section>
           <div className="left">
             <h1>Trip Details</h1>
