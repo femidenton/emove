@@ -17,4 +17,4 @@ const SuccessModal: React.FC = () => {
   )
 }
 
-export default SuccessModal
+export default SuccessModal;

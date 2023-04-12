@@ -1,4 +1,3 @@
-import { StyledEmailConfirmation } from '../styles/emailconfirmation.styled'
 import { StyledForgotPassword } from '../styles/forgotpassword.styled'
 
 const ResetPassword = () => {
@@ -20,4 +19,4 @@ const ResetPassword = () => {
   )
 }
 
-export default ResetPassword
+export default ResetPassword;

@@ -36,3 +36,12 @@ export const loginUser = async (data: any) => {
     return err;
   }
 };
+
+export const fetchRoutes = async() => {
+  try {
+    const response = await axios.get("/users/getAllRoutes")
+    return response.data;
+  } catch (err) { 
+    return err;
+  }
+}

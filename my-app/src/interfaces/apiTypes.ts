@@ -83,3 +83,11 @@ export interface User {
     __v: number;
   }
 }
+
+export interface IRoute{
+  destination: string;
+  pickup: string;
+  price: number;
+  __v: number;
+  _id: string;
+}

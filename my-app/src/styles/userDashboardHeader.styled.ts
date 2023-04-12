@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 
-export const StyledHeader = styled.header`
+export const StyledUserDashboardNavbar = styled.header`
 
   width: 100%;
   max-width: 100%;
   height: 100px;
   display: flex;
   align-items: center;
-  position: relative;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index:100;
 
 
   .overlay{
@@ -38,7 +42,7 @@ export const StyledHeader = styled.header`
 }
 
 .right h4{
-  font-family: 'Inter';
+font-family: 'Inter';
 font-style: normal;
 font-weight: 600;
 font-size: 16px;
@@ -94,8 +98,33 @@ ul li{
 
 a{
   text-decoration:none;
+  /* color: #F79009; */
+  color: #000;
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
 }
 
 
+.user{
+    display: flex;
+    align-items:center;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 140%;
+text-align: center;
+letter-spacing: 0.15px;
+color: #012A4A;
+}
+
+
+@media screen and (max-width: 765px){
+   ul{
+    display: none;
+   }
+}
 
 `

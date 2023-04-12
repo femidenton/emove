@@ -16,7 +16,12 @@ import { Navigate } from "react-router-dom";
 // };
 
 
-export const PrivateRoute = ({children}: any) => {
+export const Admin = ({children}: any) => {
     const admin = true;
     return admin ? children : <Navigate to="/login" />
+}
+
+export const User = ({ children }: any) => {
+    const user = true;
+    return user ? children : <Navigate to="/login" />
 }

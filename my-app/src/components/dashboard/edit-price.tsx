@@ -24,7 +24,7 @@ const EditPrice = () => {
           <input type="text" placeholder="NGN 0.00" />
         </div>
       </div>
-      <Button text="Set New Price" formText={""} />
+      <Button  bookTrip={""}  text="Set New Price" formText={""} />
     </StyledEditPrice>
   );
 };

@@ -29,7 +29,6 @@ export default function Login() {
     if (loginResponse.response) {
       const { data } = loginResponse.response
       if (data.message) {
-        console.log(data.message)
         setError(data.message)
       }
       return

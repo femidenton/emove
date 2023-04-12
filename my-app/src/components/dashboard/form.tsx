@@ -71,7 +71,7 @@ const Form = () => {
           </div>
         </div>
       </div>
-      <Button formText="Sign up driver" text={""} />
+      <Button bookTrip={""}  formText="Sign up driver" text={""}  />
     </StyledForm>
   );
 };

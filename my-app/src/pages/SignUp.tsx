@@ -29,6 +29,7 @@ export default function SignUp() {
 
     const signUpResponse: any = await signUpUser(signUpData)
     if (signUpResponse.response) {
+      // console.log(signUpResponse)
       const { data } = signUpResponse.response
       if (data.message) {
         setError(data.message)

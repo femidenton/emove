@@ -12,7 +12,7 @@ function EmailConfirmation() {
           reset your password
         </p>
         <p>
-          Didn't received an email?{' '}
+          Didn't received an email?
           <a className="resend" href="">
             Click to resend
           </a>
