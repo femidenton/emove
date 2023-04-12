@@ -9,15 +9,14 @@ import { IRoute } from '../interfaces/apiTypes'
 import { fetchRoutes } from '../api/api'
 
 const TripDetails = () => {
-    const [route, setRoute] = useState<IRoute>(
-        { destination: 'Gbagada', pickup: 'Bariga', price: 600.00, __v: 11, _id: "defaultId" }
-    );
+    const [route, setRoute] = useState<IRoute>();
     const { id } = useParams();
-    console.log(id)
 
     useEffect(() => {
         const fetch = async () => {
             if (id === "default") {
+                const defaultRoute = { destination: 'Gbagada', pickup: 'Bariga', price: 600.00, __v: 11, _id: "defaultId" }
+                setRoute(defaultRoute);
                 return;
             }
             const result = await fetchRoutes();
